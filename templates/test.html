@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!-- loop - переменная внутри цикла -->
+
+    {% for key, value in dt.items() %}
+        <h1>{{ key }}</h1>
+        <p>{{ value|safe }}</p>
+        {% if not loop.last %}
+            <hr>
+        {% endif %}
+    {% else %}
+        <p>Цикл не сработал</p>
+    {% endfor %}
+</body>
+</html>
